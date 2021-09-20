@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+type Doctor struct {
+	number     int
+	actorName  string
+	companions []string
+}
+
+func main() {
+	aDoctor := Doctor{
+		number:    3,
+		actorName: "Jon Pertwee",
+		companions: []string{
+			"Liz Shaw",
+			"Jo Grant",
+			"Jane Smith",
+		},
+	}
+	fmt.Println(aDoctor)
+	fmt.Println(aDoctor.actorName)
+	fmt.Println(aDoctor.companions[1])
+
+	// when you make a copy without using pointers, it does not have a same reference memory
+}
